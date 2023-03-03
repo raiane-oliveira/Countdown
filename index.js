@@ -43,3 +43,14 @@ function formatTimer(days, hours, minutes, seconds) {
 
     countdown.innerHTML = `${days} : ${hours} : ${minutes} : ${seconds}`;
 }
+
+// Modal
+
+const btnSubscribe = document.querySelector(".btn-subscribe");
+
+btnSubscribe.addEventListener("click", openModal);
+btnSubscribe.addEventListener("touchstart", openModal);
+
+function openModal(event) {
+    if (event.type === "touchstart") event.preventDefault();
+}
