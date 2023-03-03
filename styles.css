@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --black: #4d4c59;
+    --purple: #6c63ff;
+    --light-grey: #c8c8c8;
+    --text-color: #9c9ab6;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 62.5%; /* Faz 1rem valer 10px */
+}
+
+body {
+    height: 100%;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    min-height: 25rem;
+    display: block;
+    background: url("assets/top-image.svg") no-repeat top center / cover;
+}
+
+img {
+    max-width: 100%;
+    width: 100%;
+}
+
+/* Utilities classes */
+.grid {
+    display: grid;
+}
+
+.border {
+    border: 1px solid red;
+}
+
+/* Container */
+.container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    place-items: center;
+    gap: 8.2rem;
+
+    position: relative;
+    height: 100vh;
+    max-width: 1440px;
+    padding: 2.1rem 3rem;
+    margin: 0 auto;
+}
+
+/* Countdown timer */
+.countdown-timer-container {
+    gap: 1.9rem;
+    min-width: 49.4rem;
+    justify-items: center;
+}
+
+.countdown-timer-container h1 {
+    font-weight: 700;
+    font-size: 3.6rem;
+    line-height: 5.4rem;
+    letter-spacing: 0.105em;
+    text-transform: uppercase;
+    color: var(--purple);
+}
+
+.countdown-timer {
+    grid-template-columns: repeat(4, max-content);
+    justify-items: center;
+}
+
+.title-time-countdown {
+    color: var(--light-grey);
+    line-height: 2.1rem;
+    font-weight: 300;
+    font-size: 1.4rem;
+}
+
+.number-time {
+    color: var(--black);
+    font-size: 7.2rem;
+    font-weight: 400;
+    line-height: 10.8rem;
+    grid-column: 1 / -1;
+}
+
+.subscribe-text {
+    color: var(--text-color);
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+}
+
+.btn-subscribe {
+    width: 16rem;
+    height: 4.6rem;
+    margin-top: 1.2rem;
+
+    border-radius: 1rem;
+    border: none;
+    background-color: var(--purple);
+    color: white;
+    cursor: pointer;
+
+    font: 400 1.6rem "Poppins", sans-serif;
+    line-height: 2.4rem;
+
+    transition: 0.5s ease;
+}
+
+.btn-subscribe:hover {
+    box-shadow: 4px 5px 0 var(--black);
+    transform: scale(1.05);
+}
+
+/* Media queries */
+@media (max-width: 1172px) {
+    .container {
+        grid-template-columns: 1fr;
+        align-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    :root {
+        font-size: 45%;
+    }
+}
+
+@media (max-width: 405px) {
+    :root {
+        font-size: 35%;
+    }
+}
