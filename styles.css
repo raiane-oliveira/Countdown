@@ -47,10 +47,6 @@ img {
     display: grid;
 }
 
-.border {
-    border: 1px solid red;
-}
-
 /* Container */
 .container {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
