@@ -22,7 +22,7 @@
         <title>Countdown</title>
     </head>
     <body>
-        <article class="container grid">
+        <main class="container grid">
             <section class="countdown-timer-container grid">
                 <h1>Ready to launch in...</h1>
                 <div class="countdown-timer grid">
@@ -38,7 +38,33 @@
                 <button class="btn-subscribe" type="button">Inscreva-se</button>
             </section>
             <img src="assets/rocket.svg" alt="Imagem de Foguete" />
-        </article>
+        </main>
+
+        <section class="modal-form" style="display: none">
+            <div class="heading-close-modal">
+                <h3>
+                    Receba o aviso no seu e-mail quando o produto for lançado!
+                </h3>
+                <img
+                    src="assets/close_black_24dp.svg"
+                    alt="Close modal"
+                    class="close-modal-img"
+                />
+            </div>
+            <form action="/">
+                <div class="content-form">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" placeholder="Seu e-mail" />
+                </div>
+                <div class="content-form">
+                    <label for="name-user">Nome:</label>
+                    <input type="text" id="name-user" placeholder="Seu nome" />
+                </div>
+                <button type="submit" class="btn-subscribe">
+                    Receba o aviso
+                </button>
+            </form>
+        </section>
 
         <!-- JS -->
         <script src="index.js"></script>

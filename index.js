@@ -49,11 +49,26 @@ function formatTimer(days, hours, minutes, seconds) {
 
 // Modal
 
-const btnSubscribe = document.querySelector(".btn-subscribe");
+const btnSubscribe = document.querySelector(".container .btn-subscribe");
+const closeModalImg = document.querySelector(".close-modal-img");
 
 btnSubscribe.addEventListener("click", openModal);
 btnSubscribe.addEventListener("touchstart", openModal);
+closeModalImg.addEventListener("click", openModal);
+closeModalImg.addEventListener("touchstart", openModal);
 
 function openModal(event) {
     if (event.type === "touchstart") event.preventDefault();
+
+    const containerModal = document.querySelector(".modal-form");
+    const containerCountdown = document.querySelector(".container");
+
+    if (containerModal.style.display === "none") {
+        containerModal.style.display = "grid";
+        containerCountdown.style.backgroundColor = "rgba(0, 0, 0, 0.2)";
+    } else {
+        containerCountdown.style.opacity = "1";
+        containerCountdown.style.backgroundColor = "inherit";
+        containerModal.style.display = "none";
+    }
 }
