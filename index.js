@@ -61,21 +61,21 @@ function openModal(event) {
     if (event.type === "touchstart") event.preventDefault();
 
     const containerModal = document.querySelector(".modal-form");
-    const containerCountdown = document.querySelector(".container");
 
     if (containerModal.style.display === "none") {
         containerModal.style.display = "grid";
-        containerCountdown.style.backgroundColor = "rgba(0, 0, 0, 0.2)";
+        document.body.style.backgroundColor = "rgba(0, 0, 0, 0.2)";
 
         // Accessibility
         containerModal.setAttribute("aria-modal", true);
         btnSubscribe.setAttribute("aria-label", "Fechar modal");
     } else {
-        containerCountdown.style.opacity = "1";
-        containerCountdown.style.backgroundColor = "inherit";
+        document.body.style.opacity = "1";
+        document.body.style.backgroundColor = "inherit";
         containerModal.style.display = "none";
 
         // Accessibility
         containerModal.setAttribute("aria-modal", false);
+        btnSubscribe.setAttribute("aria-label", "Abrir modal");
     }
 }
