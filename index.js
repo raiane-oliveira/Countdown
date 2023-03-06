@@ -10,24 +10,16 @@ let hours = fullDateOfMonth.getHours();
 let minutes = fullDateOfMonth.getMinutes();
 let seconds = fullDateOfMonth.getSeconds();
 
-const countdown = document.querySelector(".number-time");
 updateCountdown();
 setInterval(updateCountdown, 1000);
 
 function updateCountdown() {
     let currentFullTime = new Date();
-
-    let currentTime = {
-        days: currentFullTime.getDate(),
-        hours: currentFullTime.getHours(),
-        minutes: currentFullTime.getMinutes(),
-        seconds: currentFullTime.getSeconds(),
-    };
     let timeLeft = {
-        days: days - currentTime.days,
-        hours: hours - currentTime.hours,
-        minutes: minutes - currentTime.minutes,
-        seconds: seconds - currentTime.seconds,
+        days: days - currentFullTime.getDate(),
+        hours: hours - currentFullTime.getHours(),
+        minutes: minutes - currentFullTime.getMinutes(),
+        seconds: seconds - currentFullTime.getSeconds(),
     };
 
     formatTimer(
@@ -39,6 +31,7 @@ function updateCountdown() {
 }
 
 function formatTimer(days, hours, minutes, seconds) {
+    const countdown = document.querySelector(".number-time");
     days = days < 10 ? `0${days}` : days;
     hours = hours < 10 ? `0${hours}` : hours;
     minutes = minutes < 10 ? `0${minutes}` : minutes;
