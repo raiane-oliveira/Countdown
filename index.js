@@ -64,13 +64,12 @@ function openModal(event) {
 
     if (containerModal.style.display === "none") {
         containerModal.style.display = "grid";
-        document.body.style.backgroundColor = "rgba(0, 0, 0, 0.2)";
+        document.body.style.backgroundColor = "rgba(0, 0, 0, 0.3)";
 
         // Accessibility
         containerModal.setAttribute("aria-modal", true);
         btnSubscribe.setAttribute("aria-label", "Fechar modal");
     } else {
-        document.body.style.opacity = "1";
         document.body.style.backgroundColor = "inherit";
         containerModal.style.display = "none";
 

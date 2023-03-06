@@ -152,7 +152,7 @@ img {
 .close-modal-img {
     display: block;
     width: 3.6rem;
-    transform: translate(1rem, -2.5rem);
+    transform: translate(1rem, -1rem);
     cursor: pointer;
 }
 
