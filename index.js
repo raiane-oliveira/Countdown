@@ -66,9 +66,16 @@ function openModal(event) {
     if (containerModal.style.display === "none") {
         containerModal.style.display = "grid";
         containerCountdown.style.backgroundColor = "rgba(0, 0, 0, 0.2)";
+
+        // Accessibility
+        containerModal.setAttribute("aria-modal", true);
+        btnSubscribe.setAttribute("aria-label", "Fechar modal");
     } else {
         containerCountdown.style.opacity = "1";
         containerCountdown.style.backgroundColor = "inherit";
         containerModal.style.display = "none";
+
+        // Accessibility
+        containerModal.setAttribute("aria-modal", false);
     }
 }

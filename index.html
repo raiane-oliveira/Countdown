@@ -35,12 +35,24 @@
                 <p class="subscribe-text">
                     Inscreva-se para saber mais sobre o lançamento
                 </p>
-                <button class="btn-subscribe" type="button">Inscreva-se</button>
+                <button
+                    aria-controls="modal"
+                    aria-label="Abrir modal"
+                    class="btn-subscribe"
+                    type="button"
+                >
+                    Inscreva-se
+                </button>
             </section>
             <img src="assets/rocket.svg" alt="Imagem de Foguete" />
         </main>
 
-        <section class="modal-form" style="display: none">
+        <section
+            id="modal"
+            class="modal-form"
+            style="display: none"
+            aria-modal="false"
+        >
             <div class="heading-close-modal">
                 <h3>
                     Receba o aviso no seu e-mail quando o produto for lançado!
@@ -49,6 +61,7 @@
                     src="assets/close_black_24dp.svg"
                     alt="Close modal"
                     class="close-modal-img"
+                    role="button"
                 />
             </div>
             <form action="/">
