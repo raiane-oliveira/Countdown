@@ -1,18 +1,21 @@
 // Timer
-
+let currentMonth = new Date().getMonth() + 1;
 let currentYear = new Date().getFullYear();
-let endOfYear = new Date(`December 31, ${currentYear} 23:59:59`);
-let days = endOfYear.getDate();
-let hours = endOfYear.getHours();
-let minutes = endOfYear.getMinutes();
-let seconds = endOfYear.getSeconds();
+let days = new Date(currentYear, currentMonth, 0).getDate();
+
+let fullDateOfMonth = new Date(
+    `${currentYear}-${currentMonth}-${days} 23:59:59`
+);
+let hours = fullDateOfMonth.getHours();
+let minutes = fullDateOfMonth.getMinutes();
+let seconds = fullDateOfMonth.getSeconds();
 
 const countdown = document.querySelector(".number-time");
 updateCountdown();
 setInterval(updateCountdown, 1000);
 
 function updateCountdown() {
-    let currentFullTime = new Date(Date.now());
+    let currentFullTime = new Date();
 
     let currentTime = {
         days: currentFullTime.getDate(),
